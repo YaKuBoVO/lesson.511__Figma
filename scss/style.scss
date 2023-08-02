@@ -1,10 +1,176 @@
+:root {
+   --bg-color: #252836FF;
+   --bg-color-sidebar: #1F1D2BFF;
+   --bg-color-right: #1F1D2BFF;
+   --bg--color-card: #1F1D2BFF; 
+   --bg-color-buttons: #EA7C69FF; 
+   --primary-color: #EA7C69;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
 * {
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   overflow-x: hidden;
 }
 
 body {
-   background-color: aqua;
+   font-family: 'Barlow', sans-serif;
+   background-color: #252836FF;
    color: #fff;
+}
+
+.clearfix {
+   clear: both;
+}
+ul {
+   li {
+      list-style: none;
+   }
+}
+a {
+   text-decoration: none;
+}
+p {
+   font-family: 'Barlow', sans-serif;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 500;
+   color: #fff;
+}
+.active {
+   border-bottom: 2px solid var(--primary-color) !important;
+   color: var(--primary-color) !important;
+   //margin-bottom: 20px;
+}
+
+/* Style-SCSS */
+.parent-div {
+   width: 100%;
+   height: 100vh;
+}
+.center-content {
+   height: 100vh;
+   padding: 15px 35px;
+   #site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      .logo-content {
+         h1 {
+            font-family: Barlow;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+         }
+         span {
+            display: inline-block;
+            font-family: Barlow;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            margin-bottom: 24px;
+         }
+      }
+      .search {
+            width: 300px;
+            height: 45px;
+            border-radius: 10px;
+            border: 0.5px solid #ccc;
+         input {
+            width: 270px;
+            height: 40px;
+            background: var(--bg-color);
+            color: #fff;
+            border: none;
+            outline: none;
+            &::placeholder {
+               font-family: Barlow;
+               font-size: 14px;
+               font-style: normal;
+               font-weight: 400;
+               color: rgba(171, 187, 194, 1);
+            }
+         }
+         .bx-search {
+            vertical-align: middle;
+            margin-left: 9px;
+         }
+      }
+   }
+   .pace-line {
+      .list-ul {
+         display: flex;
+         column-gap: 32px;
+         padding: 0;
+         margin: 0;
+         li {
+            font-family: Barlow;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 1);
+         }
+      }
+   }
+   .price-meal {
+      .price-content {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         .heading-title {
+            font-family: Barlow;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+         }
+         #meal-arrays {
+            width: 130px;
+            height: 50px;
+            border-radius: 8px;
+            border: 1px solid #393C49;
+            background: #1F1D2B;
+            color: #fff;
+            outline: none;
+         }
+      }
+   }
+}
+
+.sidebar {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin: 0 auto;
+   background: var(--bg-color-sidebar);
+   border-top-right-radius: 12px;
+   border-bottom-right-radius: 12px;
+
+   .sidebar-icons {
+      .logo-icon {
+         margin: 40px 0;
+      }
+      .home-icon {
+         margin-bottom: 45px;
+      }
+     div {
+      margin-bottom: 65px;
+     }
+     .logo-icon {
+      text-align: center;
+     }
+     .iconLogout {
+      margin-bottom: 32px;
+     }
+   }
+}
+.sidebar-right {
+   border: 2px solid red;
+   //float: right;
 }
