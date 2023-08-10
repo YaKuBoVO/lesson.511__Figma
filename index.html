@@ -17,21 +17,21 @@
          <div class="sidebar col-sm-1">
             <div class="sidebar-icons">
 
-               <div class="logo-icon"><img src="img/icons/logoicon.svg" alt="icon"></div>
+               <div id="icon-saidbar" class="logo-icon"><img src="img/icons/logoicon.svg" alt="icon"></div>
 
-               <div class="home-icon"><img src="img/icons/homeicon.svg" alt="icon"></div>
+               <div id="icon-saidbar" class="home-icon"><img src="img/icons/homeicon.svg" alt="icon"></div>
 
-               <div class="iconline"><img src="img/icons/line.svg" alt="icon"></div>
+               <div id="icon-saidbar" class="iconline"><img src="img/icons/line.svg" alt="icon"></div>
 
-               <div class="iconDashboard"><img src="img/icons/Dashboard.svg" alt="icon-dashboard"></div>
+               <div id="icon-saidbar" class="iconDashboard"><img src="img/icons/Dashboard.svg" alt="icon-dashboard"></div>
 
-               <div class="iconMessage"><img src="img/icons/Message.svg" alt="icon"></div>
+               <div id="icon-saidbar" class="iconMessage"><img src="img/icons/Message.svg" alt="icon"></div>
 
-               <div class="iconMessage"><img src="img/icons/Notification.svg" alt="icon"></div>
+               <div id="icon-saidbar" class="iconMessage"><img src="img/icons/Notification.svg" alt="icon"></div>
 
-               <div class="iconMessage"><img src="img/icons/Setting.svg" alt="icon"></div>
+               <div id="icon-saidbar" class="iconMessage"><img src="img/icons/Setting.svg" alt="icon"></div>
 
-               <div class="iconLogout"><img src="img/icons/Logout.svg" alt="icon"></div>
+               <div id="icon-saidbar" class="iconLogout"><img src="img/icons/Logout.svg" alt="icon"></div>
 
             </div>
          </div>
@@ -45,18 +45,18 @@
 
                <div class="search">
                   <i class='bx bx-search'></i>
-                  <input type="search" name="search" id="searchInput" placeholder="Search for food, coffe, etc..">
+                  <input type="search" name="search" id="searchInput" placeholder="Search for food, coffee, etc..">
                </div>
             </header>
 
             <div class="pace-line">
                <ul class="list-ul">
-                  <li class="list-group-item active">Hot Dishes</li>
-                  <li class="list-group-item">Cold Dishes</li>
-                  <li class="list-group-item">Soup</li>
-                  <li class="list-group-item">Grill</li>
-                  <li class="list-group-item">Appetizer</li>
-                  <li class="list-group-item">Dessert</li>
+                  <li id="hotDishes list-value" class="list-group-item active" onclick="filterMeals(hotDishes)">Hot Dishes</li>
+                  <li id="coldDishes list-value" class="list-group-item" onclick="filterMeals(ColdDishes)">Cold Dishes</li>
+                  <li id="soup list-value" class="list-group-item" onclick="filterMeals(Soup)">Soup</li>
+                  <li id="grill list-value" class="list-group-item" onclick="filterMeals(Grill)">Grill</li>
+                  <li id="appetizer list-value" class="list-group-item" onclick="filterMeals(Appetizer)">Appetizer</li>
+                  <li id="dessert list-value" class="list-group-item" onclick="filterMeals(Dessert)">Dessert</li>
                </ul>
                <hr class="pos-fixed">
             </div>
@@ -70,23 +70,120 @@
                      <option value="dine">Dine In</option>
                   </select>
                </div>
+            </div>
 
-               <div class="card-content col-12">
-                  <div class="card col-4">
-                     <img src="img/firstimg.svg" alt="img">
+
+            <div class="cardMeal">
+            </div>
+            <div id="meals"></div>
+
+            <!--<div class="card-content">
+               <div class="row justify-content-around mb-5">
+                  <div id="spicyNoodles" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                     <div class="parent-card__img">
+                        <img class="card-image" src="img/img1.png" alt="img">
+                     </div>
+                     <p class="card-des">Spicy seasoned <br> seafood noodles</p>
+                     <span class="card-price">$ 2.60</span>
+                     <p class="card-data">20 Bowls available</p>
+                  </div>
+
+                  <div id="mushRoom" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                     <div class="parent-card__img">
+                        <img class="card-image" src="img/img2.png" alt="img">
+                     </div>
+                     <p class="card-des">Salted Pasta with <br> mushroom sauce</p>
+                     <span class="card-price">$ 2.29</span>
+                     <p class="card-data">11 Bowls available</p>
+                  </div>
+
+                  <div id="soupBeef" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                     <div class="parent-card__img">
+                        <img class="card-image" src="img/img3.png" alt="img">
+                     </div>
+                     <p class="card-des">Beef dumpling in hot <br> and sour soup</p>
+                     <span class="card-price">$ 2.80</span>
+                     <p class="card-data">16 Bowls available</p>
+                  </div>
+
+                  <div id="spinachLeaf" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                     <div class="parent-card__img">
+                        <img class="card-image" src="img/img5.png" alt="img">
+                     </div>
+                     <p class="card-des">Healthy noodle with spinach leaf</p>
+                     <span class="card-price">$ 3.49</span>
+                     <p class="card-data">22 Bowls available</p>
                   </div>
                </div>
-            </div>
+
+               <div class="row justify-content-around">
+                  <div id="omelette" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                     <div class="parent-card__img">
+                        <img class="card-image" src="img/img4.png" alt="img">
+                     </div>
+                     <p class="card-des">Spicy instant noodle with <br> special omelette</p>
+                     <span class="card-price">$ 3.59</span>
+                     <p class="card-data">17 Bowls available</p>
+                  </div>
+
+                  <div id="spinachLeaf" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                     <div class="parent-card__img">
+                        <img class="card-image" src="img/img5.png" alt="img">
+                     </div>
+                     <p class="card-des">Hot spicy fried rice <br> with omelet</p>
+                     <span class="card-price">$ 3.49</span>
+                     <p class="card-data">13 Bowls available</p>
+                  </div>
+
+                  <div id="spicyNoodles2" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                     <div class="parent-card__img">
+                        <img class="card-image" src="img/img1.png" alt="img">
+                     </div>
+                     <p class="card-des">Spicy seasoned <br> seafood noodles</p>
+                     <span class="card-price">$ 2.60</span>
+                     <p class="card-data">20 Bowls available</p>
+                  </div>
+
+                  <div class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                     <div class="parent-card__img">
+                        <img class="card-image" src="img/img2.png" alt="img">
+                     </div>
+                     <p class="card-des">Salted Pasta with <br>
+                        mushroom sauce</p>
+                     <span class="card-price">$ 2.29</span>
+                     <p class="card-data">11 Bowls available</p>
+                  </div>
+               </div>
+            </div>-->
+
          </div>
 
+
          <div class="sidebar-right col-sm-3">
-            <h2 class="heading-title">Orders #34562</h2>
+            <h2 class="heading-title mt-5 mb-4">Orders #34562</h2>
+            <div id="btns" class="buttons">
+               <button id="dineBtn" class="btn btn-danger" type="button">Dine In</button>
+
+               <button id="togoBtn" class="btn btn-danger" type="button">To Go</button>
+
+               <button id="deliveryBtn" class="btn btn-danger" type="button">Delivery</button>
+            </div>
+
+            <div class="item-price">
+               <ul class="list-ul">
+                  <li class="list-item">Item</li>
+                  <li class="list-item offset-5">Qty</li>
+                  <li class="list-item">Price</li>
+               </ul>
+            </div>
+            <hr>
+
+
          </div>
       </div>
    </main>
 
 
-   <div class="clearfix"></div>
    <script src="sctipt.js"></script>
 </body>
 
