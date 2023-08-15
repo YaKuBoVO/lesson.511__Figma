@@ -15,26 +15,30 @@
    <main class="parent-div  col-sm-12">
       <div class="row">
          <div class="sidebar col-sm-1">
+
             <div class="sidebar-icons">
 
-               <div id="icon-saidbar" class="logo-icon"><img src="img/icons/logoicon.svg" alt="icon"></div>
+               <div id="icon-sidebar" class="logo-icon"><img src="img/icons/logoicon.svg" alt="icon"></div>
 
-               <div id="icon-saidbar" class="home-icon"><img src="img/icons/homeicon.svg" alt="icon"></div>
+               <div id="icon-sidebar" class="home-icon activeSidebar"><img src="img/icons/homeicon.svg" alt="icon">
+               </div>
 
-               <div id="icon-saidbar" class="iconline"><img src="img/icons/line.svg" alt="icon"></div>
+               <div id="icon-sidebar" class="iconline"><img src="img/icons/line.svg" alt="icon"></div>
 
-               <div id="icon-saidbar" class="iconDashboard"><img src="img/icons/Dashboard.svg" alt="icon-dashboard"></div>
+               <div id="icon-sidebar" class="iconDashboard"><img src="img/icons/Dashboard.svg" alt="icon-dashboard">
+               </div>
 
-               <div id="icon-saidbar" class="iconMessage"><img src="img/icons/Message.svg" alt="icon"></div>
+               <div id="icon-sidebar" class="iconMessage"><img src="img/icons/Message.svg" alt="icon"></div>
 
-               <div id="icon-saidbar" class="iconMessage"><img src="img/icons/Notification.svg" alt="icon"></div>
+               <div id="icon-sidebar" class="iconMessage"><img src="img/icons/Notification.svg" alt="icon"></div>
 
-               <div id="icon-saidbar" class="iconMessage"><img src="img/icons/Setting.svg" alt="icon"></div>
+               <div id="icon-sidebar" class="iconMessage"><img src="img/icons/Setting.svg" alt="icon"></div>
 
-               <div id="icon-saidbar" class="iconLogout"><img src="img/icons/Logout.svg" alt="icon"></div>
+               <div id="icon-sidebar" class="iconLogout"><img src="img/icons/Logout.svg" alt="icon"></div>
 
             </div>
          </div>
+
 
          <div class="center-content col-sm-8">
             <header id="site-header">
@@ -51,8 +55,10 @@
 
             <div class="pace-line">
                <ul class="list-ul">
-                  <li id="hotDishes list-value" class="list-group-item active" onclick="filterMeals(hotDishes)">Hot Dishes</li>
-                  <li id="coldDishes list-value" class="list-group-item" onclick="filterMeals(ColdDishes)">Cold Dishes</li>
+                  <li id="hotDishes list-value" class="list-group-item active" onclick="filterMeals(hotDishes)">Hot
+                     Dishes</li>
+                  <li id="coldDishes list-value" class="list-group-item" onclick="filterMeals(ColdDishes)">Cold Dishes
+                  </li>
                   <li id="soup list-value" class="list-group-item" onclick="filterMeals(Soup)">Soup</li>
                   <li id="grill list-value" class="list-group-item" onclick="filterMeals(Grill)">Grill</li>
                   <li id="appetizer list-value" class="list-group-item" onclick="filterMeals(Appetizer)">Appetizer</li>
@@ -61,24 +67,33 @@
                <hr class="pos-fixed">
             </div>
 
+
+
             <div class="price-meal">
                <div class="price-content">
                   <h2 class="heading-title">Choose Dishes</h2>
                   <select name="choose" id="meal-arrays">
                      <option value="dine">Dine In</option>
-                     <option value="dine">Dine In</option>
-                     <option value="dine">Dine In</option>
+                     <option value="dine">To Go</option>
+                     <option value="dine">Delivery</option>
                   </select>
                </div>
             </div>
 
 
-            <div class="cardMeal">
-            </div>
-            <div id="meals"></div>
 
-            <!--<div class="card-content">
-               <div class="row justify-content-around mb-5">
+            <div id="cardMeal">
+               <div id="meals">
+   
+               </div>
+            </div>
+
+
+
+<!--
+            <div class="card-content">
+
+               <div class="row justify-content-evenly mb-4">
                   <div id="spicyNoodles" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
                      <div class="parent-card__img">
                         <img class="card-image" src="img/img1.png" alt="img">
@@ -106,17 +121,10 @@
                      <p class="card-data">16 Bowls available</p>
                   </div>
 
-                  <div id="spinachLeaf" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                     <div class="parent-card__img">
-                        <img class="card-image" src="img/img5.png" alt="img">
-                     </div>
-                     <p class="card-des">Healthy noodle with spinach leaf</p>
-                     <span class="card-price">$ 3.49</span>
-                     <p class="card-data">22 Bowls available</p>
-                  </div>
                </div>
 
-               <div class="row justify-content-around">
+               <div class="row justify-content-evenly">
+
                   <div id="omelette" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
                      <div class="parent-card__img">
                         <img class="card-image" src="img/img4.png" alt="img">
@@ -144,15 +152,6 @@
                      <p class="card-data">20 Bowls available</p>
                   </div>
 
-                  <div class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                     <div class="parent-card__img">
-                        <img class="card-image" src="img/img2.png" alt="img">
-                     </div>
-                     <p class="card-des">Salted Pasta with <br>
-                        mushroom sauce</p>
-                     <span class="card-price">$ 2.29</span>
-                     <p class="card-data">11 Bowls available</p>
-                  </div>
                </div>
             </div>-->
 
@@ -177,7 +176,6 @@
                </ul>
             </div>
             <hr>
-
 
          </div>
       </div>
