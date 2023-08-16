@@ -233,7 +233,7 @@ p {
   background: var(--bg--color-card);
 }
 .parent-div .sidebar-right {
-  padding: 0 25px;
+  padding: 0 10px;
   background: #1f1d2b;
 }
 .parent-div .sidebar-right h2 {
@@ -265,4 +265,95 @@ p {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
+}
+.parent-div .order-content {
+  padding: 0;
+  margin: 0;
+}
+.parent-div .order-content .order-img__total {
+  display: flex;
+  align-items: center;
+}
+.parent-div .order-content .order-img__total img {
+  width: 50px;
+  height: 50px;
+}
+.parent-div .order-content .order-img__total .order-totle__content {
+  margin: 18px 10px 0;
+}
+.parent-div .order-content .order-img__total .order-totle__content span {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+.parent-div .order-content .order-img__total .order-totle__content p {
+  font-family: Barlow;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  color: #abbbc2;
+}
+.parent-div .order-content .order-img__total .order-heading {
+  width: 40px;
+  height: 42px;
+  margin-right: 12px;
+  text-align: center;
+  line-height: 40px;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  border-radius: 8px;
+  background: #2D303E;
+}
+.parent-div .order-content .comment-and__remove {
+  display: flex;
+  padding: 8px 4px 0 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.parent-div .order-content .comment-and__remove input {
+  width: 235px;
+  height: 45px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #ccc;
+  border-radius: 10px;
+  border: none;
+  background: #2D303E;
+  outline: none;
+}
+.parent-div .order-content .comment-and__remove input::-moz-placeholder {
+  outline: none;
+  vertical-align: middle;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.parent-div .order-content .comment-and__remove input::placeholder {
+  outline: none;
+  vertical-align: middle;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.parent-div .order-content .comment-and__remove .border-image {
+  width: 40px;
+  height: 45px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 8px;
+  border: 0.1px solid #ff7ca3;
+}
+.parent-div .order-content .comment-and__remove .border-image img.order-image {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  fill: #ff7ca3;
 }/*# sourceMappingURL=style.css.map */

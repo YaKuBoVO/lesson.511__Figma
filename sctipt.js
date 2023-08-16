@@ -1,6 +1,5 @@
 "use strict"
 
-
 let meals = {
    data: [
       {
@@ -154,7 +153,6 @@ document.getElementById("search").addEventListener("click", () => {
       }
    });
 });
-
 
 
 //Initially display all meals 
