@@ -49,20 +49,21 @@
 
                <div class="search">
                   <i class='bx bx-search'></i>
-                  <input type="search" name="search" id="searchInput" placeholder="Search for food, coffee, etc..">
+                  <input type="search" name="search" id="searchInput" placeholder="Search food, coffee, etc..">
+                  <button id="search" class="buttonSearch">Search</button>
                </div>
             </header>
 
             <div class="pace-line">
                <ul class="list-ul">
-                  <li id="hotDishes list-value" class="list-group-item active" onclick="filterMeals(hotDishes)">Hot
-                     Dishes</li>
-                  <li id="coldDishes list-value" class="list-group-item" onclick="filterMeals(ColdDishes)">Cold Dishes
+                  <li id="hotDishes list-value" class="list-group-item active" onclick="filterMeals('Hot Dishes')">Hot Dishes</li>
+                  
+                  <li id="coldDishes list-value" class="list-group-item" onclick="filterMeals('Cold Dishes')">Cold Dishes
                   </li>
-                  <li id="soup list-value" class="list-group-item" onclick="filterMeals(Soup)">Soup</li>
-                  <li id="grill list-value" class="list-group-item" onclick="filterMeals(Grill)">Grill</li>
-                  <li id="appetizer list-value" class="list-group-item" onclick="filterMeals(Appetizer)">Appetizer</li>
-                  <li id="dessert list-value" class="list-group-item" onclick="filterMeals(Dessert)">Dessert</li>
+                  <li id="soup list-value" class="list-group-item" onclick="filterMeals('Soup')">Soup</li>
+                  <li id="grill list-value" class="list-group-item" onclick="filterMeals('Grill')">Grill</li>
+                  <li id="appetizer list-value" class="list-group-item" onclick="filterMeals('Appetizer')">Appetizer</li>
+                  <li id="dessert list-value" class="list-group-item" onclick="filterMeals('Dessert')">Dessert</li>
                </ul>
                <hr class="pos-fixed">
             </div>
@@ -80,80 +81,11 @@
                </div>
             </div>
 
-
-
             <div id="cardMeal">
                <div id="meals">
    
                </div>
             </div>
-
-
-
-<!--
-            <div class="card-content">
-
-               <div class="row justify-content-evenly mb-4">
-                  <div id="spicyNoodles" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                     <div class="parent-card__img">
-                        <img class="card-image" src="img/img1.png" alt="img">
-                     </div>
-                     <p class="card-des">Spicy seasoned <br> seafood noodles</p>
-                     <span class="card-price">$ 2.60</span>
-                     <p class="card-data">20 Bowls available</p>
-                  </div>
-
-                  <div id="mushRoom" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                     <div class="parent-card__img">
-                        <img class="card-image" src="img/img2.png" alt="img">
-                     </div>
-                     <p class="card-des">Salted Pasta with <br> mushroom sauce</p>
-                     <span class="card-price">$ 2.29</span>
-                     <p class="card-data">11 Bowls available</p>
-                  </div>
-
-                  <div id="soupBeef" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                     <div class="parent-card__img">
-                        <img class="card-image" src="img/img3.png" alt="img">
-                     </div>
-                     <p class="card-des">Beef dumpling in hot <br> and sour soup</p>
-                     <span class="card-price">$ 2.80</span>
-                     <p class="card-data">16 Bowls available</p>
-                  </div>
-
-               </div>
-
-               <div class="row justify-content-evenly">
-
-                  <div id="omelette" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                     <div class="parent-card__img">
-                        <img class="card-image" src="img/img4.png" alt="img">
-                     </div>
-                     <p class="card-des">Spicy instant noodle with <br> special omelette</p>
-                     <span class="card-price">$ 3.59</span>
-                     <p class="card-data">17 Bowls available</p>
-                  </div>
-
-                  <div id="spinachLeaf" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                     <div class="parent-card__img">
-                        <img class="card-image" src="img/img5.png" alt="img">
-                     </div>
-                     <p class="card-des">Hot spicy fried rice <br> with omelet</p>
-                     <span class="card-price">$ 3.49</span>
-                     <p class="card-data">13 Bowls available</p>
-                  </div>
-
-                  <div id="spicyNoodles2" class="card-meal col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                     <div class="parent-card__img">
-                        <img class="card-image" src="img/img1.png" alt="img">
-                     </div>
-                     <p class="card-des">Spicy seasoned <br> seafood noodles</p>
-                     <span class="card-price">$ 2.60</span>
-                     <p class="card-data">20 Bowls available</p>
-                  </div>
-
-               </div>
-            </div>-->
 
          </div>
 
