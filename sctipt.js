@@ -3,7 +3,7 @@
 let meals = {
    data: [
       {
-         id: 1,
+         id: 0,
          mealName: `Spicy seasoned
                     seafood noodles`,
          category: "Soup",
@@ -12,7 +12,7 @@ let meals = {
          bowls: "20 Bowls available",
       },
       {
-         id: 2,
+         id: 1,
          mealName: `Salted Pasta with
                     mushroom sauce`,
          category: "Appetizer",
@@ -21,7 +21,7 @@ let meals = {
          bowls: "11 Bowls available",
       },
       {
-         id: 3,
+         id: 2,
          mealName: `Beef dumpling in 
                     hot and sour soup`,
          category: "Appetizer",
@@ -30,7 +30,7 @@ let meals = {
          bowls: "16 Bowls available",
       },
       {
-         id: 4,
+         id: 3,
          mealName: `Healthy noodle 
                     with spinach leaf`,
          category: "Grill",
@@ -39,7 +39,7 @@ let meals = {
          bowls: "22 Bowls available",
       },
       {
-         id: 5,
+         id: 4,
          mealName: `Spicy instant noodle 
                     with special omelette`,
          category: "Soup",
@@ -48,7 +48,7 @@ let meals = {
          bowls: "13 Bowls available",
       },
       {
-         id: 6,
+         id: 5,
          mealName: `Spicy instant noodle 
                     with special omelette`,
          category: "Soup",
@@ -58,35 +58,72 @@ let meals = {
       },
    ],
 };
+  
+
+
+
+meals.data.forEach((item) => {
+   const addOrder = document.getElementById('addOrder');
+   let orderBox = document.createElement('div');
+   orderBox.className = "order-content";
+   orderBox.innerHTML = `
+    <div class="order-img__total">
+   <img class="order-img" src=${item.image} alt="img">
+   <div class="order-total__content">
+   <span>${item.mealName}</span>
+   <p>${item.price}</p>
+   </div>
+   <h2 id="order-title" class="order-heading">0</h2>
+   <span class="order-price">$0</span>
+   </div>
+
+   <div class="comment-and__remove">
+   <input type="text" name="comment" placeholder="Please, just a little bit spicy only.">
+
+   <div class="border-image">
+   <i id="delete-icon" class='bx bx-trash-alt'></i>
+   </div>
+   </div>
+   `
+
+   addOrder.appendChild(orderBox);
+});
+
+
+function addOrderArray(Id) {
+   console.log(Id);
+}
+
 
 
 
 for(let i of meals.data) {
-   //Create Card
    let card = document.createElement("div");
    card.id = 'cardMealBox';
-   //Card should have category and should stay hidden  initially
-
+   card.addEventListener('click', () => {
+      document.getElementById('paymentOrder').style.display = 'block';
+      meals.data[0].id;
+   });
+      
    card.classList.add("cardMeal", i.category, "hide");
 
-   //image div
    let imgContainer = document.createElement("div");
    imgContainer.classList.add("image-container");
-   //img tag
+
    let image = document.createElement("img");
    image.id = 'cardImage';
    image.setAttribute("src", i.image);
    imgContainer.appendChild(image);
    card.appendChild(imgContainer);
-   // Container
+
    let container = document.createElement("div");
    container.classList.add("container");
-   //meals name
+
    let name = document.createElement("p");
    name.classList.add("mealName");
    name.innerText = i.mealName;
    container.appendChild(name);
-   //price
+
    let price = document.createElement("span");
    price.className = "cardSpan";
    price.innerText =  i.price;
@@ -102,12 +139,12 @@ for(let i of meals.data) {
 }
 
 
+
 function filterMeals(value) {
    let listGroup = document.querySelectorAll('.list-group-item');
    let liItem = document.querySelectorAll('#list-value');
    
    listGroup.forEach((li) => {
-      //check if value equals innerText
       if(value.toUpperCase() == li.innerText.toUpperCase()) {
          li.classList.add("active");
       }  else {
@@ -115,14 +152,12 @@ function filterMeals(value) {
       }
    });
 
-   //select all cards
+
    let elements = document.querySelectorAll("#cardMealBox");
       elements.forEach((element) => {
-         //display all cards
          if (value == "Hot Dishes") {
             element.classList.remove("hide");
          } else {
-            //Check if element contains category class
             if (element.classList.contains(value)) {
                element.classList.remove("hide");
             }  else {
@@ -138,8 +173,6 @@ searchInput.addEventListener("click", () => {
    searchIcon.style.display = 'none';
 });
 
-
-
 document.getElementById("search").addEventListener("click", () => {
    let searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
    let elements = document.querySelectorAll(".mealName");
@@ -153,6 +186,7 @@ document.getElementById("search").addEventListener("click", () => {
       }
    });
 });
+
 
 
 //Initially display all meals 

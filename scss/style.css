@@ -278,17 +278,18 @@ p {
   width: 50px;
   height: 50px;
 }
-.parent-div .order-content .order-img__total .order-totle__content {
+.parent-div .order-content .order-img__total .order-total__content {
   margin: 18px 10px 0;
 }
-.parent-div .order-content .order-img__total .order-totle__content span {
+.parent-div .order-content .order-img__total .order-total__content span {
+  margin-right: 8px;
   font-family: Barlow;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   color: #fff;
 }
-.parent-div .order-content .order-img__total .order-totle__content p {
+.parent-div .order-content .order-img__total .order-total__content p {
   font-family: Barlow;
   font-size: 12px;
   font-style: normal;
@@ -307,6 +308,12 @@ p {
   font-weight: 500;
   border-radius: 8px;
   background: #2D303E;
+}
+.parent-div .order-content .order-img__total .order-price {
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
 }
 .parent-div .order-content .comment-and__remove {
   display: flex;
@@ -346,14 +353,72 @@ p {
 .parent-div .order-content .comment-and__remove .border-image {
   width: 40px;
   height: 45px;
+  padding: 3px 0 0 0;
   text-align: center;
   line-height: 40px;
   border-radius: 8px;
   border: 0.1px solid #ff7ca3;
 }
-.parent-div .order-content .comment-and__remove .border-image img.order-image {
+.parent-div .order-content .comment-and__remove .border-image #delete-icon {
   display: inline-block;
   text-align: center;
+  font-size: 18px;
+  color: #ff7ca3;
+  cursor: pointer;
+}
+.parent-div .order-content .payment-content {
+  display: none;
+  position: fixed;
+  right: 16px;
+  bottom: 4px;
+  padding: 5px 10px;
+  background: rgb(31, 29, 43);
+  border-top: 0.2px solid #abbbc2;
+  transition: 0.5s;
+}
+.parent-div .order-content .payment-content .line_one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.parent-div .order-content .payment-content .line_one h4 {
+  font-family: Barlow;
   font-size: 14px;
-  fill: #ff7ca3;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(171, 187, 194);
+}
+.parent-div .order-content .payment-content .line_one span {
+  font-family: Barlow;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  color: #fff;
+}
+.parent-div .order-content .payment-content .line_two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.parent-div .order-content .payment-content .line_two h3 {
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(171, 187, 194);
+}
+.parent-div .order-content .payment-content .line_two span {
+  font-family: Barlow;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  color: #fff;
+}
+.parent-div .order-content .payment-content button {
+  width: 275px;
+  height: 40px;
+  outline: none;
+  background: var(--bg-color-buttons);
 }/*# sourceMappingURL=style.css.map */
