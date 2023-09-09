@@ -60,8 +60,6 @@ let meals = {
 };
   
 
-
-
 meals.data.forEach((item) => {
    const addOrder = document.getElementById('addOrder');
    let orderBox = document.createElement('div');
@@ -90,21 +88,32 @@ meals.data.forEach((item) => {
 });
 
 
-function addOrderArray(Id) {
-   console.log(Id);
-}
 
+let newMealsOrder = [];
+
+//function clickedMeal() {
+//   let idMeals = meals.filter((item) => item.id === id);
+//}
 
 
 
 for(let i of meals.data) {
+
    let card = document.createElement("div");
    card.id = 'cardMealBox';
+
    card.addEventListener('click', () => {
       document.getElementById('paymentOrder').style.display = 'block';
-      meals.data[0].id;
+      const clickedMealId = i.id;
+      console.log(clickedMealId);
+
+      clickedMealId.filter((item) => item.id === id);
    });
-      
+
+   function clickedMeal() {
+   let idMeals = meals.filter((item) => item.id === id);
+}
+
    card.classList.add("cardMeal", i.category, "hide");
 
    let imgContainer = document.createElement("div");
@@ -153,6 +162,7 @@ function filterMeals(value) {
    });
 
 
+
    let elements = document.querySelectorAll("#cardMealBox");
       elements.forEach((element) => {
          if (value == "Hot Dishes") {
@@ -186,7 +196,6 @@ document.getElementById("search").addEventListener("click", () => {
       }
    });
 });
-
 
 
 //Initially display all meals 
